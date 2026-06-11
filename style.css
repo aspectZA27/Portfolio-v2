@@ -114,6 +114,12 @@ span {
   font-weight: bold;
 }
 
+.html-icon {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1 / 1;
+}
+
 .css {
   width: 200px;
   height: 150px;
