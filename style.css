@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,7 +17,10 @@ a {
 }
 
 .navbar {
+  font-family: "Stack Sans Notch", sans-serif;
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: center;
   gap: 10%;
   margin-bottom: 40px;
@@ -32,33 +37,29 @@ a {
   padding: 20px;
 }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 8px;
-}
-
-.div3 {
-  grid-row-start: 2;
-}
-
 .titleR {
+  font-family: "Stack Sans Notch", sans-serif;
   font-size: 150px;
   width: 50vw;
-  font-weight: bold;
+  font-weight: lighter;
   margin-top: 20%;
   margin-bottom: 5px;
   color: white;
 }
+
 .titleK {
+  font-family: "Stack Sans Notch", sans-serif;
   font-size: 150px;
   grid-row-start: 2;
   width: 50vw;
-  font-weight: bold;
+  font-weight: lighter;
   margin-top: 5px;
   margin-bottom: 3ch;
   color: white;
+}
+
+.titleK ::first-letter {
+  font-weight: bold;
 }
 
 .ascii-logo {
@@ -74,6 +75,8 @@ a {
 }
 
 .subTitle {
+  font-family: "Stack Sans Notch", sans-serif;
+
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -97,6 +100,7 @@ span {
 }
 
 .about_h {
+  font-family: "Stack Sans Notch", sans-serif;
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 20px;
