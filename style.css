@@ -11,12 +11,35 @@ body {
   background-color: black;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 a {
   text-decoration: none;
   color: #ffffff;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.home:hover {
+  animation: navFlicker 0.4s ease-out 0s 1 forwards;
+}
+
+.about:hover {
+  animation: navFlicker 0.4s ease-out 0s 1 forwards;
+}
+
+.projects:hover {
+  animation: navFlicker 0.4s ease-out 0s 1 forwards;
+}
+
+.contact:hover {
+  animation: navFlicker 0.4s ease-out 0s 1 forwards;
 }
 
 .navbar {
@@ -24,9 +47,11 @@ a {
   display: flex;
   position: sticky;
   top: 0;
+  width: 100vw;
   justify-content: center;
-  gap: 10%;
+  gap: 15%;
   margin-bottom: 40px;
+  margin-top: 20px;
   color: white;
 }
 
@@ -35,32 +60,33 @@ a {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  position: relative;
 }
 
 .titleR {
   font-family: "Departure-Mono", monospace;
-  font-size: 30px;
-  width: 50vw;
+  font-size: 225px;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
   position: relative;
-  left: 28%;
   font-weight: lighter;
   margin-top: 6%;
   margin-bottom: 5px;
   color: white;
-  white-space: pre;
 }
 
 .titleK {
   font-family: "Departure-Mono", monospace;
-  font-size: 30px;
-  width: 50vw;
+  font-size: 225px;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
   position: relative;
-  left: 17%;
   font-weight: lighter;
   margin-top: 5px;
   margin-bottom: 3ch;
   color: white;
-  white-space: pre;
 }
 
 .subTitle {
@@ -69,9 +95,10 @@ a {
   font-weight: bold;
   margin-bottom: 10px;
   color: white;
+  padding: 0 20px;
 }
 
-span {
+span d {
   font-size: 50px;
   font-weight: bold;
   animation: rainbow 5s linear infinite;
@@ -295,5 +322,32 @@ span {
   100% {
     color: purple;
     filter: drop-shadow(0 0 10px purple);
+  }
+}
+
+@keyframes navFlicker {
+  0% {
+    color: white;
+    background-color: black;
+  }
+  20% {
+    color: black;
+    background-color: white;
+  }
+  40% {
+    color: white;
+    background-color: black;
+  }
+  60% {
+    color: black;
+    background-color: white;
+  }
+  80% {
+    color: white;
+    background-color: black;
+  }
+  100% {
+    color: black;
+    background-color: white;
   }
 }
