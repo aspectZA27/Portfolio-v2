@@ -4,11 +4,25 @@
   src: url("/sources/font/DepartureMono-Regular.otf") format("truetype");
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  /* For Chrome, Safari, and Opera */
+  .scrollable-element::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For Firefox */
+  .scrollable-element {
+    scrollbar-width: none;
+  }
+
+  /* For Internet Explorer and Edge */
+  .scrollable-element {
+    -ms-overflow-style: none;
+  }
 }
 
 body {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   font-family: Arial, sans-serif;
   margin: 0;
   overflow-x: hidden;
@@ -19,7 +33,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   width: 100px;
-  height: 30px;
+  height: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,6 +48,10 @@ a {
   animation: navFlicker 0.4s ease-out 0s 1 forwards;
 }
 
+.skills:hover {
+  animation: navFlicker 0.4s ease-out 0s 1 forwards;
+}
+
 .projects:hover {
   animation: navFlicker 0.4s ease-out 0s 1 forwards;
 }
@@ -45,33 +63,51 @@ a {
 .navbar {
   font-family: "Departure-Mono", monospace;
   display: flex;
+  background-color: black;
   position: sticky;
   top: 0;
+  height: 50px;
   width: 100vw;
   justify-content: center;
   gap: 15%;
   margin-bottom: 40px;
-  margin-top: 20px;
+
   color: white;
+  z-index: 2;
+}
+
+.heroTitle {
+  font-family: "Departure-Mono", monospace;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-size: 140%;
+  transform: translateX(70%) translateY(-75%);
 }
 
 .hero {
   background-color: #000000;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
+  height: 735px;
   position: relative;
+  border-top: 30px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  margin: 2%;
 }
 
 .titleR {
   font-family: "Departure-Mono", monospace;
   font-size: 225px;
   display: flex;
-  width: 100vw;
+  width: 93.8vw;
   justify-content: center;
   position: relative;
   font-weight: lighter;
-  margin-top: 6%;
+  margin-top: 5%;
   margin-bottom: 5px;
   color: white;
 }
@@ -80,54 +116,111 @@ a {
   font-family: "Departure-Mono", monospace;
   font-size: 225px;
   display: flex;
-  width: 100vw;
+  width: 93.8vw;
   justify-content: center;
   position: relative;
   font-weight: lighter;
   margin-top: 5px;
-  margin-bottom: 3ch;
+  margin-bottom: 4%;
   color: white;
 }
 
-.subTitle {
+#letterR {
+  animation: letterFlash 0.7s infinite;
+}
+
+#krugerSpan {
+  animation: typing 0.1s forwards;
+}
+
+span.show {
+  animation: typing 0.1s forwards;
+}
+
+.letter {
+  opacity: 0;
+}
+
+.letter.show {
+  color: rgb(255, 255, 255);
+  background-color: white;
+  opacity: 1;
+}
+
+.aboutMain {
+  border-top: 30px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  height: 786px;
+  padding: 20px;
+  margin: 2%;
+  width: 93.8vw;
+}
+
+.loader{
+  color: white;
+}
+
+.aboutTitle {
   font-family: "Departure-Mono", monospace;
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: white;
-  padding: 0 20px;
-}
-
-span d {
-  font-size: 50px;
-  font-weight: bold;
-  animation: rainbow 5s linear infinite;
-  transition:
-    color 0.5s,
-    filter 0.5s;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-size: 140%;
+  transform: translateX(60%) translateY(-75%);
 }
 
 .about_p {
+  font-family: "Departure-Mono", monospace;
+  padding-left: 2%;
+  position: relative;
   font-size: 40px;
+  transform: translateX(0%);
   font-weight: bold;
-  margin-bottom: 20px;
   color: white;
+  white-space: pre-wrap;
+}
+
+#aboutTag {
+  background: white;
+  color: black;
 }
 
 .about_h {
   font-family: "Departure-Mono", monospace;
   font-size: 50px;
+  padding: 2%;
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
 }
 
+.skillsTitle {
+  font-family: "Departure-Mono", monospace;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-size: 140%;
+  transform: translateX(50%) translateY(-75%);
+}
+.skillsMain {
+  border-top: 30px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  width: 93.8vw;
+  margin: 2%;
+}
+
 /* Container hides the scrollbar and overflowing cards */
 .carousel-container {
   overflow: hidden;
-  width: 99.3vw; /* Forces container to span full viewport width */
+  width: 93.7vw; /* Forces container to span full viewport width */
   position: relative;
-  left: 50%;
+  left: 53.4%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -204,7 +297,6 @@ span d {
 .react {
   width: 200px;
   height: 150px;
-  background: #3498db;
   color: white;
   display: flex;
   align-items: center;
@@ -214,6 +306,13 @@ span d {
   font-family: sans-serif;
   font-weight: bold;
 }
+
+.react-icon {
+  width: auto;
+  height: 150px;
+  filter: drop-shadow(0 0 10px white);
+}
+
 .node {
   width: 200px;
   height: 150px;
@@ -235,7 +334,6 @@ span d {
 .postgres {
   width: 200px;
   height: 150px;
-  background: #1abc9c;
   color: white;
   display: flex;
   align-items: center;
@@ -246,10 +344,15 @@ span d {
   font-weight: bold;
 }
 
+.postgres-icon {
+  width: auto;
+  height: 150px;
+  filter: drop-shadow(0 0 10px rgb(0, 102, 170));
+}
+
 .git {
   width: 200px;
   height: 150px;
-  background: #e74c3c;
   color: white;
   display: flex;
   align-items: center;
@@ -258,6 +361,12 @@ span d {
   margin: 0 10px;
   font-family: sans-serif;
   font-weight: bold;
+}
+
+.git-icon {
+  width: auto;
+  height: 150px;
+  filter: drop-shadow(0 0 5px red);
 }
 
 .github {
@@ -349,5 +458,25 @@ span d {
   100% {
     color: black;
     background-color: white;
+  }
+}
+
+@keyframes letterFlash {
+  0% {
+    color: black;
+    background-color: white;
+  }
+  100% {
+    color: white;
+    background-color: black;
+  }
+}
+
+@keyframes typing {
+  0% {
+    background: white;
+  }
+  100% {
+    background: black;
   }
 }
