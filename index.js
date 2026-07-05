@@ -36,11 +36,8 @@ const ruanAppear = setInterval(() => {
       let span = document.createElement("span");
       span.textContent = kruger[krugerIndex];
 
-      if (krugerIndex <= 4) {
+      if (krugerIndex <= 5) {
         span.id = "krugerSpan";
-      } else {
-        krugerIndex === 5;
-        span.id = "letterR";
       }
 
       kruger1.appendChild(span);
@@ -48,35 +45,27 @@ const ruanAppear = setInterval(() => {
 
       if (krugerIndex >= kruger.length) {
         clearInterval(krugerAppear);
-
-        let letterR = document.getElementById("letterR");
       }
     }, 150);
   }
 }, 150);
 
-const lettersA = ["A", "4"];
-let indexA = 0;
-let isVisibleA = true;
-
-setInterval(() => {
-  letterA.textContent = lettersA[indexA];
-  indexA = (indexA + 1) % lettersA.length;
-
-  setInterval(() => {
-    isVisibleA = !isVisibleA;
-    letterA.style.opacity = isVisibleA ? "1" : "0";
-  }, 300);
-}, 2000);
-
 //Loading effect on profile
 const loader = document.getElementById("loader");
-const loaders = ['|', '/', '-', '\\']
-let loaderIndex = 0
+const loaders = ["|", "/", "-", "\\"];
+let loaderIndex = 0;
 setInterval(() => {
   loader.textContent = loaders[loaderIndex];
-  loaderIndex = (loaderIndex + 1) % loaders.length
-}, 150)
+  loaderIndex = (loaderIndex + 1) % loaders.length;
+}, 150);
+
+const loader1 = document.getElementById("loader1");
+const loaders1 = ["|", "/", "-", "\\"];
+let loader1Index = 0;
+setInterval(() => {
+  loader1.textContent = loaders1[loader1Index];
+  loader1Index = (loader1Index + 1) % loaders1.length;
+}, 150);
 
 const textElement = document.getElementById("about_p");
 const text = textElement.textContent;

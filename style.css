@@ -52,7 +52,7 @@ a {
   animation: navFlicker 0.4s ease-out 0s 1 forwards;
 }
 
-.projects:hover {
+.projectsTag:hover {
   animation: navFlicker 0.4s ease-out 0s 1 forwards;
 }
 
@@ -101,10 +101,12 @@ a {
 
 .titleR {
   font-family: "Departure-Mono", monospace;
-  font-size: 225px;
+  font-size: 150px;
   display: flex;
   width: 93.8vw;
-  justify-content: center;
+  top: 13%;
+  justify-content: left;
+  align-items: center;
   position: relative;
   font-weight: lighter;
   margin-top: 5%;
@@ -114,15 +116,28 @@ a {
 
 .titleK {
   font-family: "Departure-Mono", monospace;
-  font-size: 225px;
+  font-size: 150px;
   display: flex;
   width: 93.8vw;
-  justify-content: center;
+  top: 13%;
+  justify-content: left;
+  align-items: center;
   position: relative;
   font-weight: lighter;
   margin-top: 5px;
   margin-bottom: 4%;
   color: white;
+}
+
+.profileGif {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #letterR {
@@ -159,7 +174,7 @@ span.show {
   width: 93.8vw;
 }
 
-.loader{
+.loader {
   color: white;
 }
 
@@ -211,16 +226,26 @@ span.show {
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   border-radius: 0;
-  width: 93.8vw;
+  width: 95.9vw;
+  margin: 2%;
+}
+
+.projects {
+  border-top: 30px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 786px;
+  width: 95.9vw;
   margin: 2%;
 }
 
 /* Container hides the scrollbar and overflowing cards */
 .carousel-container {
   overflow: hidden;
-  width: 93.7vw; /* Forces container to span full viewport width */
+  width: 95.7vw; /* Forces container to span full viewport width */
   position: relative;
-  left: 53.4%;
+  left: 52.3%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -233,7 +258,7 @@ span.show {
   display: flex;
   flex-wrap: nowrap;
   width: max-content;
-  animation: scroll 15s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 /* Individual card styling */
@@ -253,7 +278,6 @@ span.show {
 .html-icon {
   width: auto;
   height: 150px;
-  filter: drop-shadow(0 0 10px orange);
 }
 
 .css {
@@ -272,7 +296,6 @@ span.show {
 .css-icon {
   width: auto;
   height: 150px;
-  filter: drop-shadow(0 0 10px blue);
 }
 
 .js {
@@ -291,7 +314,6 @@ span.show {
 .js-icon {
   width: auto;
   height: 150px;
-  filter: drop-shadow(0 0 10px yellow);
 }
 
 .react {
@@ -310,7 +332,6 @@ span.show {
 .react-icon {
   width: auto;
   height: 150px;
-  filter: drop-shadow(0 0 10px white);
 }
 
 .node {
@@ -329,7 +350,6 @@ span.show {
 .node-icon {
   width: auto;
   height: 150px;
-  filter: drop-shadow(0 0 10px green);
 }
 .postgres {
   width: 200px;
@@ -347,7 +367,6 @@ span.show {
 .postgres-icon {
   width: auto;
   height: 150px;
-  filter: drop-shadow(0 0 10px rgb(0, 102, 170));
 }
 
 .git {
@@ -366,13 +385,11 @@ span.show {
 .git-icon {
   width: auto;
   height: 150px;
-  filter: drop-shadow(0 0 5px red);
 }
 
 .github {
   width: 200px;
   height: 150px;
-  background: #333333;
   color: white;
   display: flex;
   align-items: center;
@@ -383,10 +400,14 @@ span.show {
   font-weight: bold;
 }
 
+.github-icon {
+  width: auto;
+  height: 150px;
+}
+
 .php {
   width: 200px;
   height: 150px;
-  background: #8e44ad;
   color: white;
   display: flex;
   align-items: center;
@@ -395,6 +416,11 @@ span.show {
   margin: 0 10px;
   font-family: sans-serif;
   font-weight: bold;
+}
+
+.php-icon {
+  width: auto;
+  height: 100px;
 }
 /* Animation moves the track by exactly half its total width */
 @keyframes scroll {
