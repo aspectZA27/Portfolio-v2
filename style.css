@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&family=VT323&display=swap");
+
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Departure-Mono";
   src: url("/sources/font/DepartureMono-Regular.otf") format("truetype");
@@ -23,7 +30,7 @@ html {
 
 body {
   background-color: rgb(0, 0, 0);
-  font-family: Arial, sans-serif;
+  font-family: "VT323", monospace;
   margin: 0;
   overflow-x: hidden;
   width: 100vw;
@@ -61,7 +68,7 @@ a {
 }
 
 .navbar {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   display: flex;
   background-color: black;
   position: sticky;
@@ -77,12 +84,12 @@ a {
 }
 
 .heroTitle {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   position: absolute;
   color: rgb(0, 0, 0);
   z-index: 1;
   font-size: 140%;
-  transform: translateX(70%) translateY(-75%);
+  transform: translateX(80%) translateY(-80%);
 }
 
 .hero {
@@ -100,7 +107,7 @@ a {
 }
 
 .titleR {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   font-size: 150px;
   display: flex;
   width: 93.8vw;
@@ -115,7 +122,7 @@ a {
 }
 
 .titleK {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   font-size: 150px;
   display: flex;
   width: 93.8vw;
@@ -131,8 +138,8 @@ a {
 
 .profileGif {
   position: absolute;
-  width: 800px;
-  height: 800px;
+  width: 750px;
+  height: 750px;
   top: 50%;
   left: 75%;
   transform: translate(-50%, -50%);
@@ -163,15 +170,12 @@ span.show {
 }
 
 .aboutMain {
-  border-top: 30px solid white;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
   border-radius: 0;
   height: 786px;
-  padding: 20px;
   margin: 2%;
-  width: 93.8vw;
+  width: 96.3vw;
 }
 
 .loader {
@@ -179,16 +183,16 @@ span.show {
 }
 
 .aboutTitle {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   position: absolute;
   color: rgb(0, 0, 0);
   z-index: 1;
   font-size: 140%;
-  transform: translateX(60%) translateY(-75%);
+  transform: translateX(70%) translateY(-80%);
 }
 
 .about_p {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   padding-left: 2%;
   position: relative;
   font-size: 40px;
@@ -203,8 +207,18 @@ span.show {
   color: black;
 }
 
+.aboutProfile {
+  width: 80vw;
+  position: relative;
+
+  border-top: 30px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
 .about_h {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   font-size: 50px;
   padding: 2%;
   font-weight: bold;
@@ -213,21 +227,23 @@ span.show {
 }
 
 .skillsTitle {
-  font-family: "Departure-Mono", monospace;
+  font-family: "VT323", monospace;
   position: absolute;
   color: rgb(0, 0, 0);
   z-index: 1;
   font-size: 140%;
-  transform: translateX(50%) translateY(-75%);
+  transform: translateX(1280%) translateY(-80%);
 }
 .skillsMain {
+  display: block;
+  position: relative;
   border-top: 30px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   border-radius: 0;
-  width: 95.9vw;
-  margin: 2%;
+  width: 80vw;
+  margin-left: 1%;
 }
 
 .projects {
@@ -240,187 +256,101 @@ span.show {
   margin: 2%;
 }
 
-/* Container hides the scrollbar and overflowing cards */
-.carousel-container {
-  overflow: hidden;
-  width: 95.7vw; /* Forces container to span full viewport width */
-  position: relative;
-  left: 52.3%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background: #000000;
-  padding: 20px 0;
+#skillLayout {
+  margin-left: 5%;
+  height: 8.5%;
 }
 
-/* Track holds the cards in a row and animates them */
-.carousel-track {
+ul li {
   display: flex;
-  flex-wrap: nowrap;
-  width: max-content;
-  animation: scroll 10s linear infinite;
-}
-
-/* Individual card styling */
-.html {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.html-icon {
-  width: auto;
-  height: 150px;
-}
-
-.css {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.css-icon {
-  width: auto;
-  height: 150px;
-}
-
-.js {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.js-icon {
-  width: auto;
-  height: 150px;
-}
-
-.react {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.react-icon {
-  width: auto;
-  height: 150px;
-}
-
-.node {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.node-icon {
-  width: auto;
-  height: 150px;
-}
-.postgres {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.postgres-icon {
-  width: auto;
-  height: 150px;
-}
-
-.git {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.git-icon {
-  width: auto;
-  height: 150px;
-}
-
-.github {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.github-icon {
-  width: auto;
-  height: 150px;
-}
-
-.php {
-  width: 200px;
-  height: 150px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.php-icon {
-  width: auto;
+  width: 95%;
+  padding: 0%;
   height: 100px;
+  margin-bottom: 2px;
+  border: 1px dotted white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#highLight {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  height: 100%;
+  font-size: 60px;
+}
+
+#noHighLight {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  font-size: 60px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+}
+.projectsTitle {
+  font-family: "VT323", monospace;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-size: 140%;
+  transform: translateX(10%) translateY(-215%);
+}
+
+.project1 {
+  width: 30.5vw;
+  height: 80.5vh;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.1%;
+  margin-left: 1.1%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.project2 {
+  width: 30.5vw;
+  height: 80.5vh;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.1%;
+  margin-left: 1%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.test {
+  color: white;
+  white-space: pre-wrap;
+  font-size: 20px;
+}
+
+.project3 {
+  width: 30.5vw;
+  height: 80.5vh;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.1%;
+  margin-left: 1%;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 /* Animation moves the track by exactly half its total width */
 @keyframes scroll {
